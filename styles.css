@@ -1,0 +1,139 @@
+/* Базовые настройки страницы */
+body {
+  background-color: #f1f1f1; 
+  color: #0f141e;            
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', sans-serif; 
+  font-weight: normal;
+  margin: 0;
+  padding: 20px 0;
+}
+
+/* Стилизация ссылок */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+}
+
+a:active {
+  color: grey;
+}
+
+/* Аватар (фото профиля) */
+.avatar {
+  width: 200px;
+  border-radius: 28px;      
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);  
+}
+
+/* Главный контейнер */
+.container {
+  max-width: 750px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Общие стили для информационных блоков */
+.news {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+/* Цвета заднего фона для карточек */
+.bg-yellow { background: #fff9dc; }
+.bg-green  { background: #e5ffe7; }
+.bg-red    { background: #ffe5e5; } /* Исправлено: добавлен символ # */
+.bg-brown  { background: rgb(192, 132, 132); }
+.bg-blue   { background: rgb(161, 161, 221); }
+.bg-violet { background: rgb(247, 156, 247); }
+
+/* Блок "Who am I" */
+.information {
+  background: rgb(241, 198, 118);
+}
+
+.information p {
+  color: #86898f;
+  margin: 0;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Списки */
+ul {
+  padding: 0 20px;
+}
+
+/* Таблица */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: 10px 5px;
+}
+
+/* Стилизация формы обратной связи */
+.contact {
+  margin-top: 30px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #86898f;  
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #ccc;
+  color: black;
+  padding: 10px 0;
+  outline: none;
+  font-family: inherit; 
+}
+
+/* Кнопка отправки формы */
+input[type="submit"] {
+  background: #0f141e;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background: #333a42;
+}
+.info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}

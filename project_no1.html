@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Mercer | Senior Mobile App Developer CV</title>
+    <style>
+        /* Base Reset & Variables */
+        :root {
+            --primary: #1e293b;
+            --secondary: #0f172a;
+            --accent: #2563eb;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg);
+            color: var(--text-main);
+            padding: 40px 20px;
+        }
+
+        /* CV Container */
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        header {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            margin-bottom: 5px;
+        }
+
+        .header-title p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            text-align: right;
+        }
+
+        .contact-info p {
+            margin-bottom: 4px;
+        }
+
+        .contact-info a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        /* Section Styling */
+        section {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 24px;
+        }
+
+        section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--secondary);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            margin-left: 15px;
+            height: 2px;
+            background-color: #e2e8f0;
+        }
+
+        p.summary {
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+
+        /* Grid for Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skills-category h3 {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .skills-category ul {
+            list-style: none;
+        }
+
+        .skills-category li {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            color: var(--text-main);
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .skills-category li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Experience & Education Items */
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .job-title span {
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .timeline-item ul {
+            padding-left: 20px;
+            margin-top: 6px;
+        }
+
+        .timeline-item li {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            color: var(--text-main);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+            }
+            .contact-info {
+                text-align: left;
+                font-size: 0.9rem;
+            }
+            .main-content {
+                padding: 24px;
+            }
+            .header-title h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- Header -->
+        <header>
+            <div class="header-title">
+                <h1>Alex Mercer</h1>
+                <p>Senior Mobile App Developer</p>
+            </div>
+            <div class="contact-info">
+                <p>📱 +1 (555) 019-2834</p>
+                <p>✉️ <a href="mailto:alex.mercer@email.com">alex.mercer@email.com</a></p>
+                <p>🌐 <a href="https://github.com" target="_blank">://github.com</a></p>
+                <p>📍 San Francisco, CA</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            
+            <!-- Summary -->
+            <section id="profile">
+                <h2>Professional Summary</h2>
+                <p class="summary">
+                    Innovative and results-driven Mobile Application Developer with over 6 years of experience designing, developing, and deploying high-performance iOS and Android applications. Expert in native Swift and Kotlin workflows, as well as cross-platform architectures (Flutter). Track record of optimizing application performance by up to 35% and publishing over 12 apps to the App Store and Google Play Store.
+                </p>
+            </section>
+
+            <!-- Technical Skills -->
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <h3>iOS Development</h3>
+                        <ul>
+                            <li>Swift, Objective-C</li>
+                            <li>SwiftUI, UIKit</li>
+                            <li>CoreData, Combine</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Android Development</h3>
+                        <ul>
+                            <li>Kotlin, Java</li>
+                            <li>Jetpack Compose</li>
+                            <li>Coroutines, Room</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Cross-Platform & Tools</h3>
+                        <ul>
+                            <li>Flutter & Dart</li>
+                            <li>Git, CI/CD (GitHub Actions)</li>
+                            <li>REST APIs, GraphQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Work Experience -->
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="job-title">Senior Mobile Developer <span>at TechHive Solutions</span></div>
+                        <div class="timeline-date">2023 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Led a team of 4 engineers to rebuild a flagship e-commerce application in Flutter, expanding user engagement by 40%.</li>
+                        <li>Architected and implemented a secure, local-first data syncing system using Room and CoreData.</li>
+                        <li>Reduced continuous integration build and deployment errors by 25% by configuring custom automated testing pipelines.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="job-title">Mobile App Developer <span>at Quantum App Studio</span></div>
+                        <div class="timeline-date">2020 - 2023</div>
+                    </div>
+                    <ul>
+                        <li>Developed and optimized 5 native iOS apps using Swift, maintaining a 4.8-star average rating on the App Store.</li>
+                        <li>Integrated third-party hardware SDKs via Bluetooth Low Energy (BLE) for fitness tracking features.</li>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Rostova | Professional Educator CV</title>
+    <style>
+        /* Base Reset & Variables */
+        :root {
+            --primary-slate: #2c3e50;
+            --accent-teal: #16a085;
+            --text-dark: #34495e;
+            --text-muted: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --border-color: #e9ecef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding: 40px 20px;
+        }
+
+        /* CV Container */
+        .cv-box {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-top: 6px solid var(--primary-slate);
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* Header Styling */
+        header {
+            padding: 40px;
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-left h1 {
+            font-size: 2.4rem;
+            color: var(--primary-slate);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .header-left p {
+            font-size: 1.15rem;
+            color: var(--accent-teal);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .header-right {
+            font-size: 0.95rem;
+            text-align: right;
+            color: var(--text-dark);
+        }
+
+        .header-right p {
+            margin-bottom: 4px;
+        }
+
+        .header-right a {
+            color: var(--text-dark);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent-teal);
+        }
+
+        /* Layout Main Body */
+        .cv-body {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        section {
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: var(--primary-slate);
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: var(--border-color);
+        }
+
+        .philosophy-text {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            border-left: 3px solid var(--accent-teal);
+            padding-left: 16px;
+        }
+
+        /* Highlights Grid */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .stat-card {
+            background-color: #fafbfc;
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .stat-card .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-teal);
+            display: block;
+        }
+
+        .stat-card .desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            font-weight: 600;
+        }
+
+        /* Pedagogies / Skills Tags */
+        .skills-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: var(--bg-light);
+            color: var(--primary-slate);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            font-weight: 500;
+        }
+
+        /* Experience Timeline Elements */
+        .history-item {
+            margin-bottom: 20px;
+        }
+
+        .history-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .history-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-slate);
+        }
+
+        .role-title span {
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent-teal);
+            font-weight: 600;
+        }
+
+        .history-item ul {
+            padding-left: 20px;
+            margin-top: 4px;
+        }
+
+        .history-item li {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 650px) {
+            body {
+                padding: 10px;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+            }
+            .header-right {
+                text-align: left;
+                font-size: 0.9rem;
+            }
+            .cv-body {
+                padding: 24px;
+            }
+            .header-left h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-box">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <h1>Elena Rostova</h1>
+                <p>Licensed Secondary English Educator</p>
+            </div>
+            <div class="header-right">
+                <p>📍 Chicago, IL</p>
+                <p>✉️ <a href="mailto:elena.rostova@email.com">elena.rostova@email.com</a></p>
+                <p>📱 +1 (555) 012-3948</p>
+                <p>📜 State Board License #9482-IL</p>
+            </div>
+        </header>
+
+        <!-- Main Body Content -->
+        <div class="cv-body">
+            
+            <!-- Teaching Philosophy Statement -->
+            <section id="philosophy">
+                <h2>Teaching Philosophy</h2>
+                <p class="philosophy-text">
+                    Dedicated to fostering an inclusive, student-centered classroom environment where critical thinking and media literacy thrive. Believes in adapting curriculum methodologies to accommodate diverse learning styles, ensuring every student has equitable opportunities to succeed academically and grow personally.
+                </p>
+            </section>
+
+            <!-- Classroom Metrics Overview -->
+            <section id="metrics">
+                <h2>Classroom Impact</h2>
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <span class="value">94%</span>
+                        <span class="desc">State Assessment Pass Rate</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="value">6+ Years</span>
+                        <span class="desc">Instructional Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="value">150+</span>
+                        <span class="desc">Students Taught Annually</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Methodologies / Competencies -->
+            <section id="skills">
+                <h2>Pedagogies & Skills</h2>
+                <div class="skills-flex">
+                    <span class="skill-tag">Differentiated Instruction</span>
+                    <span class="skill-tag">Curriculum Design (Ubd Framework)</span>
+                    <span class="skill-tag">Restorative Classroom Management</span>
+                    <span class="skill-tag">Google Classroom Expert</span>
+                    <span class="skill-tag">ESL / ELL Accommodations</span>
+                    <span class="skill-tag">Formative & Summative Data Analysis</span>
+                    <span class="skill-tag">Parent-Teacher Collaboration</span>
+                </div>
+            </section>
+
+            <!-- Professional Teaching Experience -->
+            <section id="experience">
+                <h2>Teaching Experience</h2>
+                
+                <div class="history-item">
+                    <div class="history-meta">
+                        <div class="role-title">9th & 10th Grade English Teacher <span>at Oakridge High School</span></div>
+                        <div class="timeline-date">2021 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Designed and executed integrated literature units aligned with Common Core standards for 5 daily classes.</li>
+                        <li>Implemented an active-reading strategy that increased district-level comprehensive test scores by 12%.</li>
+                        <li>Co-chaired the School Technology Committee, training 18 fellow staff members on incorporating hybrid learning tools.</li>
+                    </ul>
+                </div>
+
+                <div class="history-item">
+                    <div class="history-meta">
+                        <div class="role-title">Language Arts Teacher <span>at Maplewood Middle School</span></div>
+                        <div class="timeline-date">2019 - 2021</div>
+                    </div>

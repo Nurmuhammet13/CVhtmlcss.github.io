@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morgan Taylor | Social Media Marketing Specialist CV</title>
+    <style>
+        /* Base Reset & Brand Colors */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --primary: #4f46e5; /* Indigo */
+            --secondary: #ec4899; /* Pink */
+            --dark: #1e293b;
+            --light-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .cv-card {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Header Layout */
+        header {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .header-left h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        .header-left p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            margin-top: 6px;
+        }
+
+        .header-right {
+            font-size: 0.95rem;
+            text-align: right;
+        }
+
+        .header-right p {
+            margin-bottom: 6px;
+        }
+
+        .header-right a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+        }
+
+        .header-right a:hover {
+            border-bottom-style: solid;
+        }
+
+        /* Main Grid Wrapper */
+        .cv-body {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        /* Sections structure */
+        section {
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background-color: var(--border);
+        }
+
+        p.intro {
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+
+        /* KPI / Metric Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .kpi-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .kpi-card .number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .kpi-card .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        /* Channels & Competencies Tags */
+        .tags-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #f1f5f9;
+            color: var(--dark);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        .tag.highlight {
+            background-color: #e0e7ff;
+            color: var(--primary);
+            border-color: #c7d2fe;
+        }
+
+        /* Experience Timeline Elements */
+        .exp-item {
+            margin-bottom: 24px;
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .exp-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .exp-title span {
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .exp-date {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+
+        .exp-item ul {
+            padding-left: 20px;
+        }
+
+        .exp-item li {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 650px) {
+            body {
+                padding: 12px;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+            }
+            .header-right {
+                text-align: left;
+                font-size: 0.9rem;
+            }
+            .cv-body {
+                padding: 24px;
+            }
+            .header-left h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-card">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <h1>Morgan Taylor</h1>
+                <p>Social Media Marketing Specialist</p>
+            </div>
+            <div class="header-right">
+                <p>📍 New York, NY</p>
+                <p>✉️ <a href="mailto:morgan.smm@email.com">morgan.smm@email.com</a></p>
+                <p>🔗 <a href="https://linkedin.com" target="_blank">://linkedin.com</a></p>
+                <p>📱 +1 (555) 017-4829</p>
+            </div>
+        </header>
+
+        <!-- Main Body -->
+        <div class="cv-body">
+            
+            <!-- Executive Summary -->
+            <section id="summary">
+                <h2>Profile Summary</h2>
+                <p class="intro">
+                    Data-driven Social Media Marketer with over 5 years of experience scaling organic and paid brand presences across Meta, TikTok, and LinkedIn. Proven track record of blending creative content strategy with analytical performance metrics to lower customer acquisition costs (CAC) and drive high-intent website conversions.
+                </p>
+            </section>
+
+            <!-- Key Metric Highlights -->
+            <section id="metrics">
+                <h2>Proven Results</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <span class="number">3.4x</span>
+                        <span class="label">Average ROAS</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="number">+140%</span>
+                        <span class="label">Organic Growth Rate</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="number">$250K+</span>
+                        <span class="label">Ad Spend Managed</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Channels & Core Competencies -->
+            <section id="skills">
+                <h2>Expertise & Channels</h2>
+                <div class="tags-wrapper">
+                    <span class="tag highlight">Meta Ads Manager</span>
+                    <span class="tag highlight">TikTok Ads & Creator Marketplace</span>
+                    <span class="tag">LinkedIn Campaign Manager</span>
+                    <span class="tag">Influencer Sourcing & Outreach</span>
+                    <span class="tag">Social Copywriting</span>
+                    <span class="tag">Google Analytics 4</span>
+                    <span class="tag">A/B Creative Testing</span>
+                    <span class="tag">CapCut & Canva Pro</span>
+                    <span class="tag">Community Management</span>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                
+                <div class="exp-item">
+                    <div class="exp-meta">
+                        <div class="exp-title">Growth Marketing Specialist <span>at Lumina Direct Brands</span></div>
+                        <div class="exp-date">2023 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Spearheaded a TikTok strategy that generated 3 viral short-form organic videos, resulting in over 4 million combined views and an immediate 22% lift in direct-to-consumer store sales.</li>
+                        <li>Built, tracked, and scaled multi-tier paid social ad campaigns across Instagram and Facebook with a strict focus on maximizing Return on Ad Spend (ROAS).</li>
+                        <li>Coordinated with a roster of 25+ micro-influencers to secure user-generated content (UGC) for paid advertising creative assets.</li>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Vance | Professional YouTube Editor CV</title>
+    <style>
+        /* Base Reset & Design Tokens */
+        :root {
+            --bg-dark: #0f0f0f;
+            --bg-card: #1f1f1f;
+            --accent-red: #ff0000;
+            --accent-blue: #3ea6ff;
+            --text-primary: #ffffff;
+            --text-secondary: #aaa0a0;
+            --border: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        /* Container */
+        .cv-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Header Section */
+        header {
+            padding: 40px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-main h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 4px;
+        }
+
+        .header-main p {
+            font-size: 1.1rem;
+            color: var(--accent-red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-details {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-align: right;
+        }
+
+        .contact-details p {
+            margin-bottom: 4px;
+        }
+
+        .contact-details a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Grid */
+        .content-body {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        section {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+        }
+
+        section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: var(--border);
+        }
+
+        /* Highlights Row */
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+
+        .metric-card {
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .metric-card .num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: block;
+        }
+
+        .metric-card .label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        /* Skill Badges */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .badge {
+            background-color: #2a2a2a;
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .badge.expert {
+            border-color: var(--accent-red);
+        }
+
+        /* Experience Elements */
+        .job-entry {
+            margin-bottom: 24px;
+        }
+
+        .job-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .job-title span {
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .job-entry ul {
+            padding-left: 18px;
+        }
+
+        .job-entry li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        /* Portfolio Links */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .portfolio-item {
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-blue);
+        }
+
+        .portfolio-item h3 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .portfolio-item p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+            }
+            .contact-details {
+                text-align: left;
+            }
+            .content-body {
+                padding: 24px;
+            }
+            .header-main h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-wrapper">
+        <!-- Header Section -->
+        <header>
+            <div class="header-main">
+                <h1>Jordan Vance</h1>
+                <p>YouTube Video Editor & Storyteller</p>
+            </div>
+            <div class="contact-details">
+                <p>📍 Los Angeles, CA</p>
+                <p>✉️ <a href="mailto:jordan.edits@email.com">jordan.edits@email.com</a></p>
+                <p>💼 <a href="https://youtube.com" target="_blank">Portfolio Channel</a></p>
+                <p>📱 +1 (555) 014-7839</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content-body">
+            
+            <!-- Key Video Metrics -->
+            <section id="metrics">
+                <h2>Channel Impact Metrics</h2>
+                <div class="metrics-bar">
+                    <div class="metric-card">
+                        <span class="num">50M+</span>
+                        <span class="label">Total Views Generated</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="num">+18%</span>
+                        <span class="label">Avg Retention Rate Boost</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="num">3.2M</span>
+                        <span class="label">Combined Subscriber Pool</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>Software & Skills</h2>
+                <div class="skills-container">
+                    <span class="badge expert">Adobe Premiere Pro</span>
+                    <span class="badge expert">After Effects (Motion Graphics)</span>
+                    <span class="badge expert">DaVinci Resolve (Color Grading)</span>
+                    <span class="badge">Pacing & Storyboarding</span>
+                    <span class="badge">Audio Mixing & Sound Design</span>
+                    <span class="badge">Thumbnail Strategy Alignment</span>
+                    <span class="badge">YouTube Retention Analytics</span>
+                    <span class="badge">Photoshop</span>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section id="experience">
+                <h2>Editing Experience</h2>
+                
+                <div class="job-entry">
+                    <div class="job-meta">
+                        <div class="job-title">Lead Video Editor <span>for "TechUnboxed" (1.5M Subs)</span></div>
+                        <div class="job-date">2023 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Cut, polished, and delivered 2 high-paced tech review videos per week under tight deadlines.</li>
+                        <li>Implemented retention-focused visual hooks in the first 30 seconds, leading to an average 18% increase in watch time.</li>
+                        <li>Designed custom motion graphics templates for lower thirds, transitions, and text pop-ups.</li>
+                    </ul>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-meta">
+                        <div class="job-title">Freelance Video Editor <span>for various Creators</span></div>
